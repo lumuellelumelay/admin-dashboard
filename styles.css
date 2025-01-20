@@ -1,0 +1,132 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
+:root {
+    --logo-font-size: 2.4rem; /* 3.6rem */
+    --title-font-size: 1.44rem; /* 2.4rem */
+    --sub-title-font-size: 1.2rem; /* 1.44rem */
+    --card-title-font-size: 1.1rem; 
+    --medium-font-size: 1rem;
+    --small-title-font-size: 0.8rem;
+    --smaller-font-size: 0.64rem;
+
+    --primary-color: rgb(47, 39, 206);
+    --secondary-color: rgb(222, 220, 255);
+    --tertiary-color: rgb(251, 251, 254);
+    --accent-color: rgb(67, 59, 255);
+    --second-background-color: rgb(232, 232, 232);
+    --font-color: rgb(5, 3, 21);
+    --second-font-color: rgb(29, 29, 29);
+    --third-font-color: rgb(54, 54, 54);
+    --fourth-font-color: rgb(255, 255, 255);
+
+    --light-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --dark-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    --horizontal-dark-shadow: 6px 0px 10px rgba(0, 0, 0, 0.16), 6px 0 10px rgba(0, 0, 0, 0.23);
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    height: 100vh;
+}
+
+/** Header **/
+header {
+    background-color: var(--primary-color);
+    box-shadow: var(--horizontal-dark-shadow);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    font-size: var(--title-font-size);
+    padding: 1rem;
+}
+
+header .logo .title {
+    color: var(--fourth-font-color);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+}
+
+header .logo svg {
+    display: inline-block;
+    width: auto;
+    height: var(--logo-font-size);
+}
+
+header .logo svg path {
+    fill: var(--fourth-font-color);
+}
+
+/* Controls */
+header .controls {
+    padding-top: 1.3rem;
+}
+
+header .controls ul li {
+    list-style: none;
+}
+
+header .controls ul li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    color: var(--fourth-font-color);
+    font-size: var(--sub-title-font-size);
+    font-weight: 600;
+
+    padding: 1em 0 0 1rem;
+}
+
+header .controls ul li a svg {
+    display: inline-block;
+    width: auto;
+    height: var(--title-font-size);
+}
+
+header .controls ul li a svg path {
+    fill: var(--fourth-font-color);
+}
+
+/* Settings */
+header .settings {
+    padding-top: 2.2rem;
+}
+
+header .settings ul li {
+    list-style: none;
+}
+
+header .settings ul li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    color: var(--fourth-font-color);
+    font-size: var(--sub-title-font-size);
+    font-weight: 600;
+
+    padding: 1em 0 0 1rem;
+}
+
+header .settings ul li a svg {
+    display: inline-block;
+    width: auto;
+    height: var(--title-font-size);
+}
+
+header .settings ul li a svg path {
+    fill: var(--fourth-font-color);
+}
