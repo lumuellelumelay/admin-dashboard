@@ -18,10 +18,14 @@
     --secondary-color: rgb(222, 220, 255);
     --tertiary-color: rgb(251, 251, 254);
     --accent-color: rgb(67, 59, 255);
-    --second-background-color: rgb(232, 232, 232);
+
+    --second-background-color: rgb(238, 238, 238);
+    --light-background-color: rgba(232, 232, 232, 0.3);
+    --lighter-background-color: rgba(140, 140, 140, 0.6);
+
     --font-color: rgb(5, 3, 21);
     --second-font-color: rgb(29, 29, 29);
-    --third-font-color: rgb(54, 54, 54);
+    --third-font-color: rgba(41, 41, 41, 0.8);
     --fourth-font-color: rgb(255, 255, 255);
 
     --light-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -46,10 +50,10 @@ header {
     align-items: center;
 
     font-size: var(--title-font-size);
-    padding: 1rem;
+    padding: 1.5rem 0 0 1rem;
 }
 
-header .logo .title {
+header .logo .logo-title {
     color: var(--fourth-font-color);
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
@@ -118,7 +122,7 @@ header .settings ul li a {
     font-size: var(--sub-title-font-size);
     font-weight: 600;
 
-    padding: 1em 0 0 1rem;
+    padding: 1rem 0 0 1rem;
 }
 
 header .settings ul li a svg {
@@ -129,4 +133,296 @@ header .settings ul li a svg {
 
 header .settings ul li a svg path {
     fill: var(--fourth-font-color);
+}
+
+/* Main */
+main {
+    background-color: var(--second-background-color);
+}
+
+/* Top Section */
+.top-section {
+    display: grid;
+    grid-template-rows: 0.5fr 1fr;
+    gap: 0.5rem;
+
+    background-color: var(--tertiary-color);
+    box-shadow: var(--dark-shadow);
+
+    padding-left: 1rem;
+}
+
+.top-section .top-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10rem;
+
+    padding: 1rem 0 0.5rem 1rem;
+}
+
+/* Search Bar */
+.top-section .top-header .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding-left: 1rem;
+}
+
+.top-section .top-header .search-bar svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.top-section .top-header .search-bar input {
+    width: 100%;
+    height: 2rem;
+    padding: 0.5rem;
+    background-color: var(--light-background-color);
+    border: rgb(54, 54, 54, 0.6) 1px solid;
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+/* Profile */
+.top-section .top-header .profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.top-section .top-header .profile svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.top-section .top-header .profile img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+.top-section .top-header .profile .users-account {
+    color: var(--font-color);
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--card-title-font-size);
+    font-weight: 700;
+}
+
+/* Bottom Section */
+.bottom-header {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    align-items: center;
+    gap: 10rem;
+
+    padding: 0 1rem 1rem 1rem;
+}
+
+/* Introduction */
+.bottom-header .account {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    padding-left: 1rem;
+}
+
+.bottom-header .account img {
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
+}
+
+.bottom-header .account .account-introduction {
+    color: var(--font-color);
+    font-family: "Open Sans", sans-serif;
+}
+
+.bottom-header .account .account-introduction .introduction {
+    font-weight: 700;
+    font-size: var(--small-title-font-size);
+}
+
+.bottom-header .account .account-introduction .account-name {
+    font-weight: 700;
+    font-size: var(--sub-title-font-size);
+}
+
+/* Controls */
+.bottom-header .account-controls {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.bottom-header .account-controls button {
+    font-size: var(--medium-font-size);
+    font-weight: 600;
+
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 0.6rem;
+    width: 7.5rem;
+
+    box-shadow: var(--light-shadow);
+}
+
+/* Main Content */
+.content-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+
+    padding: 1rem;
+}
+
+.content-section .projects .title {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--card-title-font-size);
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+.content-section .projects .project-container {
+    display: grid;
+}
+
+.content-section .projects .project-container .projects-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.content-section .projects .project-container .projects-list .card {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    background-color: var(--tertiary-color);
+    border-radius: 10px;
+    padding: 1rem;
+
+    box-shadow: var(--light-shadow);
+    width: 400px;
+}
+
+.content-section .projects .project-container .projects-list .card .card-content .sub-title {
+    color: var(--font-color);
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--medium-font-size);
+    font-weight: 700;
+}
+
+.content-section .projects .project-container .projects-list .card .card-content .description-paragraph {
+    color: var(--third-font-color);
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--small-title-font-size);
+    font-weight: 500;
+
+    padding-top: 0.5rem;
+}
+
+.content-section .projects .project-container .projects-list .card .card-controls {
+    display: flex;
+    justify-content: end;
+    gap: 0.8rem;
+    padding-bottom: 1rem;
+}
+
+/* Sidebar */
+.sidebar-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Announcements */
+.content-section .sidebar-section .announcements-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.content-section .sidebar-section .announcements .line {
+    height: 1px;
+    width: 90%;
+    background-color: var(--lighter-background-color);
+}
+
+.content-section .sidebar-section .announcements .title {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--card-title-font-size);
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+.content-section .sidebar-section .announcements .announcements-list {
+    background-color: var(--tertiary-color);
+    box-shadow: var(--light-shadow);
+    border-radius: 10px;
+}
+
+.content-section .sidebar-section .announcements .announcements-list .announcement {
+    max-width: 280px;
+    padding: 0.5rem;
+}
+
+.content-section .sidebar-section .announcements .announcements-list .announcement .small-title {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--small-title-font-size);
+    font-weight: 600;
+}
+
+.content-section .sidebar-section .announcements .announcements-list .announcement .announcement-paragraph {
+    color: var(--third-font-color);
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--smaller-font-size);
+    font-weight: 500;
+
+    padding-top: 0.2rem;
+}
+
+/* Trending */
+.content-section .sidebar-section .trending .title {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--card-title-font-size);
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+.content-section .sidebar-section .trending .profile-list {
+    background-color: var(--tertiary-color);
+    box-shadow: var(--light-shadow);
+    border-radius: 10px;
+
+    padding: 0.5rem;
+}
+
+.content-section .sidebar-section .trending .profile-list .profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.content-section .sidebar-section .trending .profile-list .profile img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.content-section .sidebar-section .trending .profile-list .profile .profile-container {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--small-title-font-size);
+}
+
+.content-section .sidebar-section .trending .profile-list .profile .profile-container .description {
+    color: var(--third-font-color);
 }
